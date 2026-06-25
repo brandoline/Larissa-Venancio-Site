@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero{
+    height: 100dvh;
+}
+
+.container{
+    width: 80%;
+    height: 100dvh;
+}
+
+:root{
+    --bg: #FBF7F5;
+    --primary: #DADDD5;
+    --secondary: #98AA94;
+    --dark: #3C5945;
+    --text: #201F0F;
+    --muted: #C8877B;
+    
+    --radius: 2rem;
+    --spacing-xs: 0.5rem;
+    --spacing: 1rem;
+    --spacing-md: 1.5rem;
+}
