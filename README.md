@@ -8,11 +8,11 @@ A ideia de possuir um site surgiu após uma breve conversa sobre outras criaçõ
 ## Estrutura
 Para sanar todas as necessidades apresentadas pela psicóloga, o site foi estruturado da sequinte foram:
 
-|- Hero + CTA
-|- TCC
-|- Perguntas Frequentes
-|- Mídias sociais
-|- CTA
+|- Hero + CTA<br>
+|- TCC<br>
+|- Perguntas Frequentes<br>
+|- Mídias sociais<br>
+|- CTA<br>
 
 ## Funcionalidades
 <ul>
