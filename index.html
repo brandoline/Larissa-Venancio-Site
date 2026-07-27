@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="" alt="Logo Larissa Venâncio" class="header-logo">
+        <img src="" alt="Logo Larissa Venâncio">
         <nav>
             <ul>
                 <li><a href="#tcc">TCC</a></li>
@@ -19,24 +19,19 @@
                 <li class="link-cta"><a href="#">Vamos agendar uma consulta?</a></li>
             </ul>
         </nav>
-
-        <div class="header-mobile">
-            <img src="" alt="abrir-menu" id="open-menu" class="mobile-nav-img">
-            <div class="mobile-nav hidden">
-                <ul>
-                    <li><span id="close-menu">|||</span></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">TCC</a></li>
-                    <li><a href="#">Dúvidas</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Vamos agendar uma consulta?</a></li>
-                </ul>
-            </div>
+        <div>
+            <ul class="mobile-nav hidden">
+                <li><a href="#tcc">TCC</a></li>
+                <li><a href="#duvidas">Dúvidas</a></li>
+                <li><a href="#social">Instagram</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#">Vamos agendar uma consulta?</a></li>
+            </ul>
         </div>
+        <button class="hamburguer"></button>
     </header>
     <main>
-        <section class="hero">
+        <section class="container hero">
             <div class="hero-info">
                 <span class="citacao">Psicóloga | CRP 00000</span>
                 <h1>Larissa Venâncio</h1>
@@ -100,9 +95,21 @@
             </button>
         </section>
         <section class="container social" id="social">
+            <h2>Me encontre nas redes sociais</h2>
+            <iframe 
+            src="https://www.instagram.com/psilarissavenancio?igsh=NmlhajV3YnhtcWxm" 
+            width="80%" 
+            height="400" 
+            frameborder="0" 
+            scrolling="no" 
+            allowtransparency="true"
+            class="iframe"
+            >
+            </iframe>
             <div class="comentario">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida diam dapibus, tristique felis at, tincidunt nisi. Quisque malesuada massa vitae magna maximus, ut scelerisque mi tempus. Nunc eleifend sapien justo, porta dictum risus malesuada sed. Morbi sit amet risus tempor, lacinia nunc gravida, lobortis metus. In ut justo at eros tristique porttitor.</p>
-                <img src="" alt="Logo Larissa Venancio">
+                <img src="" alt="Instagram">
+                <img src="" alt="WhatsApp">
             </div>
         </section>
         <section class="cta" id="contato">
@@ -113,7 +120,7 @@
             </article>
         </section>
     </main>
-    <footer clas="container">
+    <footer>
         <article class="grid-footer">
             <article class="sobre">
                 <span>Sobre</span>
@@ -136,5 +143,6 @@
         <span class="divisor"></span>
         <p>Desenvolvido por <a href="#">Helen Brandão</a></p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
