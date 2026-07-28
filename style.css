@@ -48,6 +48,7 @@ button:hover{
     --spacing-xs: 0.3rem;
     --spacing-s: 0.7rem;
     --spacing: 1rem;
+    --spacing-md-sm: 1.3rem;
     --spacing-md: 1.5rem;
     --spacing-l: 2rem;
     --spacing-xl: 3rem;
@@ -81,6 +82,9 @@ nav{
     background: none;
     border-top: 3px solid var(--dark);
     cursor: pointer;
+    position: fixed;
+    right: 10px;
+    top: 10px;
     z-index: 1;
 }
 
@@ -107,7 +111,6 @@ nav{
     align-items: center;
     text-align: center;
     gap: 0;
-    pointer-events: none;
 }
 
 .mobile-nav, .mobile-nav a{
@@ -173,10 +176,6 @@ h2{
     gap: var(--spacing-l);
 }
 
-.about h2{
-    color: var(--dark);
-}
-
 .grid-acoes{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -202,7 +201,7 @@ h2{
 .card h3{
     color: var(--dark);
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: var(--spacing-md-sm);
 }
 
 .card-citacao{
@@ -222,12 +221,13 @@ h2{
 h4{
     color: var(--dark);
     font-family: var(--font-title);
-    font-size: 1rem;
+    font-size: var(--spacing-md-sm);
     font-weight: 400;
 }
 
 .pergunta-resposta{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: var(--bg);
     text-align: left;
@@ -236,6 +236,12 @@ h4{
     border: 0;
     border-bottom: 1px solid var(--primary);
     cursor: pointer;
+}
+
+.pergunta{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--spacing-s);
 }
 
 .duvidas span{
@@ -353,7 +359,9 @@ nav, nav ul{
 @media (min-width: 640px){
 
     h1{font-size: 3.5rem;}
-    h2{font-size: 2rem;}
+    h2{font-size: 2rem;
+    color: var(--dark);
+    }
 
     .link-cta{
         background-color: var(--muted);
