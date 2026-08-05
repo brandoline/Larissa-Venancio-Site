@@ -9,7 +9,8 @@ btnMenu.addEventListener('click', () => {
 perguntas.forEach(pergunta => {
     pergunta.addEventListener('click', () => {
         const resposta = pergunta.querySelector('.resposta');
-
         resposta.classList.toggle('hidden');
+        const fechar = pergunta.querySelector('.fechar');
+        fechar.classList.toggle('rotate45');
     })
 })
