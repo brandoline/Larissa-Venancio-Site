@@ -304,6 +304,7 @@ h4{
 /* SECTION CTA*/
 .cta{
     width: 100%;
+    background-color: var(--primary);
     min-height: 25rem;
     padding: var(--spacing);
     display: flex;
