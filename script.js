@@ -4,13 +4,21 @@ const perguntas = document.querySelectorAll(".pergunta-resposta");
 
 btnMenu.addEventListener('click', () => {
     navMobile.classList.toggle('hidden');
-})
+});
 
 perguntas.forEach(pergunta => {
     pergunta.addEventListener('click', () => {
         const resposta = pergunta.querySelector('.resposta');
-        resposta.classList.toggle('hidden');
         const fechar = pergunta.querySelector('.fechar');
+        const estaAberta = resposta.classList.contains('aberta');
+
         fechar.classList.toggle('rotate45');
-    })
-})
+        resposta.classList.toggle('aberta');
+
+        if (!estaAberta) {
+            resposta.style.maxHeight = resposta.scrollHeight + 'px';
+        } else {
+            resposta.style.maxHeight = null;
+        }
+    });
+});

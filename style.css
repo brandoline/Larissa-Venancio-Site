@@ -137,7 +137,7 @@ p{
     text-align: justify;
 }
 
-h1,h2{font-family: var(--font-title); margin-bottom: var(--spacing); color: var(--dark);}
+h1,h2{font-family: var(--font-title); margin-bottom: var(--spacing-md); color: var(--dark);}
 
 h1{
     font-size: var(--title-size);
@@ -267,6 +267,40 @@ h4{
     width: 70%;
 }
 
+.fechar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    font-size: var(--spacing-md);
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.rotate45{
+    transform: rotate(45deg);
+}
+
+/* aqui está o "respiro" */
+.resposta{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease 0.05s;
+}
+
+.resposta.aberta{
+    opacity: 1;
+}
+
+.resposta p{
+    padding-top: var(--spacing-s);
+}
+
 .duvidas span{
     display: flex;
     justify-content: center;
@@ -281,7 +315,12 @@ h4{
 }
 
 .rotate45{
-    rotate: 45deg;
+    transform: rotate(45deg);
+}
+
+.height100 {
+    max-height: 200px;
+    opacity: 1;
 }
 
 .resposta{
@@ -304,7 +343,6 @@ h4{
 /* SECTION CTA*/
 .cta{
     width: 100%;
-    background-color: var(--primary);
     min-height: 25rem;
     padding: var(--spacing);
     display: flex;
@@ -328,6 +366,7 @@ h4{
 
 .cta .container p{
     color: var(--bg);
+    margin-bottom: var(--spacing-md);
 }
 
 .btn-cta{
@@ -335,7 +374,7 @@ h4{
     border: 1px solid var(--muted);
     font-size: var(--spacing);
     color: var(--bg);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .btn-cta:hover{
@@ -388,71 +427,11 @@ footer img{
     width: 7rem;
 }
 
-/*
-footer{
-    background-color: var(--dark);
-    color: var(--primary);
-    font-family: var(--font-text);
-    font-size: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: var(--spacing);
-}
-
-footer span{
-    font-weight: 700;
-}
-
-footer a{
-    color: var(--primary);
-}
-footer a:hover{
-    color: var(--muted);
-}
-
-footer ul{
-    list-style: none;
-}
-
-footer ul li{
-    font-size: var(--spacing-s);
-}
-
-footer .main{
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-navegacao{
-    display: flex;
-    gap: var(--spacing-md);
-    /*
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing);
-    margin-bottom: var(--spacing);
-    
-}
-*/
-
 .divisor{
     width: 100%;
     height: 1px;
     background-color: var(--secondary);
 }
-
-/*
-nav, nav ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: var(--spacing-md);
-    padding: var(--spacing);
-}
-*/
 
 @media (min-width: 640px){
 
@@ -461,6 +440,10 @@ nav, nav ul{
     color: var(--dark);
     }
     h4{font-size: var(--spacing-md-sm);}
+
+    p,a, h3{
+        font-size: 18px;
+    }
 
     .link-cta{
         background-color: var(--muted);
@@ -567,6 +550,10 @@ nav, nav ul{
 
     footer img{
         margin-left: var(--spacing-l);
+    }
+
+    footer p, footer a{
+        font-size: 12px;
     }
 
     .grid-footer{
