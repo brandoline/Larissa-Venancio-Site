@@ -20,10 +20,12 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 section{
     padding: var(--spacing-md);
+    margin: var(--spacing-xl);
 }
 
 .container{
@@ -36,6 +38,10 @@ button:hover{
 
 p{
     text-align: justify;
+}
+
+p, a{
+    font-size: 14px;
 }
 
 .btn{
@@ -70,14 +76,19 @@ p{
 
 header{
     display: flex;
+    width: 100%;
+    background-color: var(--bg);
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing);
+    padding: var(--spacing-s);
+    margin-bottom: var(--spacing);
+    z-index: 5;
 }
 
 header img{
-    width: 60px;
-    height: 40px;
+    width: 70px;
+    height: 50px;
+    display: none;
 }
 
 nav{
@@ -153,6 +164,7 @@ h2{
 /* SECTION HERO */
 .hero{
     display: flex;
+    height: 100dvh;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -225,6 +237,7 @@ h2{
     margin-bottom: var(--spacing-l);
     border-radius: var(--radius);
     color: var(--bg);
+    z-index: 2;
 }
 
 .card-citacao p{
@@ -349,6 +362,7 @@ h4{
     align-items: center;
     justify-content: center;
     background-color: var(--secondary);
+    margin-bottom: 0 !important;
 }
 
 .cta .container{
@@ -522,10 +536,6 @@ footer img{
         width: 100%;
     }
 
-    .grid-acoes{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     .pergunta-resposta{
         font-size: 1.2rem;
     }
@@ -559,5 +569,16 @@ footer img{
     .grid-footer{
         display: flex;
         justify-content: left;
+    }
+}
+
+@media (min-width: 1024px){
+
+    header img{
+        display: block;
+    }
+
+    .grid-acoes{
+        grid-template-columns: repeat(3, 1fr);
     }
 }
