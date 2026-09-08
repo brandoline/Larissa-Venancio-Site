@@ -137,6 +137,9 @@ nav{
     list-style: none;
     text-decoration: none;
     color: var(--dark);
+    z-index: 1;
+    font-family: 'Quicksand';
+    font-weight: 700;
 }
 
 a{
@@ -530,6 +533,7 @@ footer img{
     .hero{
         flex-direction: row;
         justify-content: space-around;
+        min-height: fit-content;
     }
 
     .imagem{
