@@ -86,9 +86,8 @@ header{
 }
 
 header img{
-    width: 70px;
+    width: 60px;
     height: 50px;
-    display: none;
 }
 
 nav{
@@ -175,6 +174,10 @@ h2{
     gap: var(--spacing-md);
 }
 
+.hero-image{
+    width: 30rem;
+}
+
 .hero-info{
     display: flex;
     flex-direction: column;
@@ -209,6 +212,7 @@ h2{
 .grid-acoes{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing);
 }
 
 .card{
@@ -216,7 +220,6 @@ h2{
     border: none;
     border-radius: var(--radius);
     padding: var(--spacing-md);
-    margin: var(--spacing);
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
@@ -462,6 +465,10 @@ footer img{
         font-size: 18px;
     }
 
+    section{
+        height: fit-content;
+    }
+
     .link-cta{
         background-color: var(--muted);
         padding: 0.7rem;
@@ -530,16 +537,6 @@ footer img{
         display: none;
     }
 
-    .hero{
-        flex-direction: row;
-        justify-content: space-around;
-        min-height: fit-content;
-    }
-
-    .imagem{
-        width: 100%;
-    }
-
     .pergunta-resposta{
         font-size: 1.2rem;
     }
@@ -584,5 +581,11 @@ footer img{
 
     .grid-acoes{
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero{
+        flex-direction: row;
+        justify-content: space-around;
+        min-height: fit-content;
     }
 }
