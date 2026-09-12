@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Larissa Venâncio | Psicóloga Especialista em TCC</title>
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="./assets/icon/lv_icon_verde.svg" alt="Logo Larissa Venâncio" class="nav-img">
+        <img src="./favicon.svg" alt="Logo Larissa Venâncio" class="nav-img">
         <nav>
             <ul>
                 <li><a href="#tcc">TCC</a></li>
@@ -20,18 +20,18 @@
             </ul>
         </nav>
         <div>
-            <ul class="mobile-nav hidden">
-                <li><a href="#tcc">TCC</a></li>
-                <li><a href="#duvidas">Dúvidas</a></li>
-                <li><a href="#social">Instagram</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <ul class="mobile-nav">
+                <li><a href="#tcc" id="navMobileItem">TCC</a></li>
+                <li><a href="#duvidas" id="navMobileItem">Dúvidas</a></li>
+                <li><a href="#social" id="navMobileItem">Instagram</a></li>
+                <li><a href="#contato" id="navMobileItem">Contato</a></li>
                 <li><a href="https://wa.me/47991527546">Vamos agendar uma consulta?</a></li>
             </ul>
         </div>
         <button class="hamburguer" aria-label="Menu"></button>
     </header>
     <main>
-        <section class="container hero">
+        <section class="hero">
             <div class="hero-info">
                 <span class="citacao">Psicóloga | CRP 12/24423</span>
                 <h1>Larissa Venâncio</h1>
@@ -42,9 +42,7 @@
                 </div>
                 <a class="btn btn-cta">Vamos agendar uma consulta?</a>
             </div>
-           <div class="imagem">
-                <img src="./assets/larissa-venancio.png" alt="Larissa Venâncio" class="hero-image">
-            </div> 
+                <img src="./assets/larissa-venancio.png" alt="Larissa Venâncio" class="hero-image"> 
         </section>
         <section class="container about" id="tcc">
             <h2>O que é terapia cognitivo-comportamental?</h2>
@@ -52,7 +50,7 @@
             <div class="grid-acoes">
                 <article class="card">
                     <h3>Cognitivo</h3>
-                    <p>Trabalhamos a identificação e a reestruturação de padrões de pensamento disfuncionais, conduzindo o paciente ao desenvolvimento de interpretações mais realistas e adaptativas frente às diversas situações da vida.</p>
+                    <p>É trabalhado a identificação e a reestruturação de padrões de pensamento disfuncionais, conduzindo o paciente ao desenvolvimento de interpretações mais realistas e adaptativas frente às diversas situações da vida.</p>
                 </article>
                 <article class="card">
                     <h3>Comportamental</h3>
@@ -60,7 +58,7 @@
                 </article>
                 <article class="card">
                     <h3>Psicoeducação</h3>
-                    <p>Oferecemos informações claras e fundamentadas sobre o funcionamento psicológico do paciente, fortalecendo seu engajamento e proporcionando maior autonomia ao longo de todo o processo terapêutico.</p>
+                    <p>São oferecidas informações claras e fundamentadas sobre o funcionamento psicológico do paciente, fortalecendo seu engajamento e proporcionando maior autonomia ao longo de todo o processo terapêutico.</p>
                 </article>
             </div>
             <article class="card-citacao">
@@ -69,7 +67,8 @@
                 <p>Será um prazer acompanhar você nessa jornada.</p>
             </article>
         </section>
-        <section class="container duvidas" id="duvidas">
+        <section class="duvidas" id="duvidas">
+            <div class="container">
             <h2>Perguntas Frequentes</h2>
             <button class="pergunta-resposta">
                 <div class="pergunta">
@@ -116,6 +115,7 @@
                 <p>O agendamento pode ser realizado por meio do WhatsApp. Entre em contato para verificar a disponibilidade de horários e esclarecer qualquer dúvida.</p>
             </div>
         </button>
+        </div>
         </section>
         <section class="container social" id="social">
             <h2>Me encontre nas redes sociais</h2>
@@ -146,7 +146,7 @@
                     <li><a href="#contato">Contato</a></li>
                     <li><a href="https://open.spotify.com/playlist/3MPhxoCyAiHVnGZijJmldH?si=4345cf62521e4146&nd=1
 &dlsi=f5c2be7271364284
-">Playlist relaxante</li>
+" target="_blank">Playlist relaxante</li>
                 </ul>
             </article>
             <article class="sobre">
@@ -162,14 +162,14 @@
                 <ul>
                     <li>Brusque-SC</li>
                     <li>psilarissavenancio@gmail.com</li>
-                    <li><a href="https://wa.me/47991527546">+55 (47) 99152-7546</a></li>
+                    <li><a href="https://wa.me/47991527546" target="_blank">+55 (47) 99152-7546</a></li>
                 </ul>
             </article>
             </div>
         </article>
         <p>© Todos direitos reservados à Psicóloga Larissa Venâncio</p>
         <span class="divisor"></span>
-        <p>Desenvolvido por <a href="instagram.com/itsbrandoline">Helen Brandão</a></p>
+        <p>Desenvolvido por <a href="instagram.com/itsbrandoline" target="_blank">Helen Brandão</a></p>
     </footer>
 <script src="script.js"></script>
 </body>

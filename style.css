@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+html{scroll-behavior: smooth;}
+
 .hidden{
     display: none;
     visibility: hidden;
@@ -28,10 +30,6 @@ section{
     margin: var(--spacing-xl);
 }
 
-.container{
-    width: 100%;
-}
-
 button:hover{
     cursor: pointer;
 }
@@ -48,6 +46,10 @@ p, a{
     padding: var(--spacing);
     border-radius: var(--radius);
     font-family: var(--font-text);
+}
+
+.shadow{
+    box-shadow: 1px 6px 6px -2px rgba(0,0,0,0.10);
 }
 
 :root{
@@ -67,6 +69,7 @@ p, a{
     --spacing-md: 1.5rem;
     --spacing-l: 2rem;
     --spacing-xl: 3rem;
+    --spacing-xxl: 5rem;
 
     --title-size: 2.5rem;
     --sub-title-size: 1.5rem;
@@ -76,6 +79,7 @@ p, a{
 
 header{
     display: flex;
+    position: fixed;
     width: 100%;
     background-color: var(--bg);
     justify-content: space-between;
@@ -96,7 +100,8 @@ nav{
 }
 
 .hamburguer{
-    width: 30px;
+    width: 35px;
+    margin: var(--spacing);
     border: none;
     background: none;
     border-top: 3px solid var(--dark);
@@ -104,12 +109,12 @@ nav{
     position: fixed;
     right: 10px;
     top: 10px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .hamburguer::after, .hamburguer::before{
     content: " ";
-    width: 30px;
+    width: 35px;
     height: 3px;
     background-color: var(--dark);
     display: block;
@@ -119,26 +124,37 @@ nav{
 .mobile-nav{
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100dvh;
-    width: 100dvw;
+    width: 60%;
     background-color: var(--primary);
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    gap: 0;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 3;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, .25);
+
+    transform: translateX(100%);
+    transition: transform 0.45s ease;
+}
+
+
+.mobile-nav.mostrar{
+    transform: translateX(0);
 }
 
 .mobile-nav, .mobile-nav a{
     list-style: none;
     text-decoration: none;
     color: var(--dark);
-    z-index: 1;
+    z-index: 3;
     font-family: 'Quicksand';
+    font-size: medium;
     font-weight: 700;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xxl) var(--spacing);
 }
 
 a{
@@ -166,7 +182,9 @@ h2{
 /* SECTION HERO */
 .hero{
     display: flex;
-    height: 100dvh;
+    width: 70%;
+    /*height: 90dvh;*/
+    height: auto;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -176,6 +194,7 @@ h2{
 
 .hero-image{
     width: 30rem;
+    margin-top: var(--spacing);
 }
 
 .hero-info{
@@ -252,8 +271,19 @@ h2{
 
 /* SECTION DUVIDAS */
 .duvidas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    background-color: var(--primary);
+}
+
+.duvidas > div{
     display: flex;
     flex-direction: column;
+    margin: var(--spacing-md);
+    gap: var(--spacing-md);
 }
 
 h4{
@@ -273,6 +303,7 @@ h4{
     padding: var(--spacing);
     border: 0;
     border-bottom: 1px solid var(--primary);
+    border-radius: var(--radius);
     cursor: pointer;
 }
 
@@ -317,7 +348,7 @@ h4{
 }
 
 .resposta p{
-    padding-top: var(--spacing-s);
+    padding: var(--spacing-s) 0;
 }
 
 .duvidas span{
@@ -367,6 +398,7 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background-color: var(--secondary);
     margin-bottom: 0 !important;
 }
@@ -532,11 +564,6 @@ footer img{
         visibility: hidden;
     }
 
-    .header-mobile{
-        visibility: hidden;
-        display: none;
-    }
-
     .pergunta-resposta{
         font-size: 1.2rem;
     }
@@ -584,8 +611,34 @@ footer img{
     }
 
     .hero{
+        min-height: fit-content;
+    }
+
+    .hero-image{
+        width: 35rem;
+    }
+}
+
+@media (min-width: 1440px){
+
+    header img{
+        display: block;
+    }
+
+    .grid-acoes{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero{
+        width: 80%;
         flex-direction: row;
         justify-content: space-around;
         min-height: fit-content;
+        padding-top: var(--spacing-xxl);
+    }
+
+    .hero-image{
+        width: 40rem;
     }
 }
+
