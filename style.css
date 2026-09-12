@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 
-html{scroll-behavior: smooth;}
+html{scroll-behavior: smooth;overflow-x: hidden}
+body{overflow-x: hidden}
 
 .hidden{
     display: none;
@@ -193,7 +194,7 @@ h2{
 }
 
 .hero-image{
-    width: 30rem;
+    width: 20rem;
     margin-top: var(--spacing);
 }
 
@@ -562,6 +563,10 @@ footer img{
     .hamburguer{
         display: none;
         visibility: hidden;
+    }
+
+    .hero-image{
+        width: 30rem;
     }
 
     .pergunta-resposta{
