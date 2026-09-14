@@ -471,8 +471,9 @@ footer .main{
 }
 
 .footer-navegacao{
-    display: flex;
-    gap: var(--spacing-xl);
+    display: grid;
+    gap: var(--spacing);
+    margin-left: var(--spacing);
 }
 
 footer p{
@@ -603,17 +604,16 @@ footer img{
         align-items: start;
     }
 
+    .footer-navegacao{
+        display: flex;
+    } 
+
     footer img{
         margin-left: var(--spacing-l);
     }
 
     footer p, footer a{
         font-size: 12px;
-    }
-
-    .grid-footer{
-        display: flex;
-        justify-content: left;
     }
 }
 
