@@ -384,7 +384,7 @@ h4{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
 }
 
 .elfsight-app-516e8e7b-7aac-4091-afcc-9e7b97c510ad{
@@ -448,7 +448,7 @@ footer{
     justify-content: center;
     background-color: var(--dark);
     font-family: var(--font-text);
-    font-size: 0.75;
+    font-size: 0.75rem;
     color: var(--primary);
     padding: var(--spacing-md);
 }
