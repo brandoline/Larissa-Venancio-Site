@@ -381,14 +381,18 @@ h4{
 /* SECTION SOCIAL */
 .social{
     margin: var(--spacing-l);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.elfsight-app-516e8e7b-7aac-4091-afcc-9e7b97c510ad{
+    width: 70%;
 }
 
 .social img{
     width: 3rem;
-}
-
-.iframe{
-    margin-bottom: var(--spacing);
 }
 
 /* SECTION CTA*/
@@ -579,9 +583,8 @@ footer img{
         font-weight: 600;
     }
 
-    .iframe{
-        width: 50%;
-        height: 600px;
+    .elfsight-app-516e8e7b-7aac-4091-afcc-9e7b97c510ad{
+        width: 100%;
     }
 
     footer{
