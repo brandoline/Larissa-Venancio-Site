@@ -389,6 +389,7 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 60vh;
 }
 
 .elfsight-app-516e8e7b-7aac-4091-afcc-9e7b97c510ad{
