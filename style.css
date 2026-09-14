@@ -31,6 +31,10 @@ section{
     margin: var(--spacing-xl);
 }
 
+section[id]{
+    scroll-margin-top: 90px; /* ajuste conforme a altura real do seu header no mobile */
+}
+
 button:hover{
     cursor: pointer;
 }

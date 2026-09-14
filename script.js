@@ -1,7 +1,7 @@
 const btnMenu = document.querySelector(".hamburguer");
 const navMobile = document.querySelector(".mobile-nav");
 const perguntas = document.querySelectorAll(".pergunta-resposta");
-const navItens = document.querySelectorAll("#navMobileItem")
+const navItens = document.querySelectorAll(".navMobileItem");
 
 btnMenu.addEventListener('click', () => {
     navMobile.classList.toggle('mostrar');
