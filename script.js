@@ -26,7 +26,25 @@ perguntas.forEach(pergunta => {
 });
 
 navItens.forEach(navItem => {
-    navItem.addEventListener('click', () => {
-        navMobile.classList.remove('mostrar');
-    })
-})
+    navItem.addEventListener('click', (e) => {
+        const href = navItem.getAttribute('href');
+
+        // só intercepta se for um link de âncora (#algumaCoisa)
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+
+            navMobile.classList.remove('mostrar');
+
+            const destino = document.querySelector(href);
+            if (destino) {
+                // espera a animação de fechamento do menu terminar antes de rolar
+                setTimeout(() => {
+                    destino.scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            }
+        } else {
+            // link externo (ex: WhatsApp) — só fecha o menu, comportamento padrão segue
+            navMobile.classList.remove('mostrar');
+        }
+    });
+});
