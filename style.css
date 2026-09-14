@@ -162,6 +162,10 @@ nav{
     padding: var(--spacing-xxl) var(--spacing);
 }
 
+.mobile-nav a{
+    padding: var(--spacing-s) 0;
+}
+
 a{
     text-decoration: none;
 }
@@ -481,8 +485,8 @@ footer ul li, footer a{
     color: var(--primary);
 }
 
-footer ul li, p, a{
-    font-size: var(--spacing-s);
+footer ul > li, footer p, footer a{
+    font-size: var(--spacing-s) !important;
 }
 
 footer img{
